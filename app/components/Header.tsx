@@ -27,7 +27,7 @@ export default function Header() {
             <Link href="/docs" className="text-sm font-medium text-zinc-950 hover:underline">Docs</Link>
             <button
               onClick={handleOpenApp}
-              className="flex h-8 items-center justify-center gap-2 rounded-full bg-foreground px-3 text-sm text-background transition-colors hover:bg-[#383838]"
+              className="inline-flex h-8 items-center justify-center gap-2 rounded-full bg-black px-3 text-sm text-white transition-colors hover:bg-[#111]"
             >
               Open App
             </button>
