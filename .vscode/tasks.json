@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Next: dev",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "next",
+        "pattern": [],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting the development server",
+          "endsPattern": "started server on|compiled successfully|ready - started server on"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Open Simple Browser (http://localhost:3000)",
+      "type": "shell",
+      "command": "open 'vscode://simple-browser/http://localhost:3000'",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent"
+      }
+    },
+    {
+      "label": "Dev + Simple Browser",
+      "dependsOn": [
+        "Next: dev",
+        "Open Simple Browser (http://localhost:3000)"
+      ],
+      "dependsOrder": "sequence"
+    }
+  ]
+}
